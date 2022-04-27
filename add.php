@@ -4,8 +4,8 @@ require_once 'inc/functions.php';
 
 
 $input = json_decode(file_get_contents('php://input'));
-$sahkoposti = filter_var($sahkoposti->sahkoposti, FILTER_SANITIZE_SPECIAL_CHARS);
-$palaute = filter_var($palaute->palaute, FILTER_SANITIZE_SPECIAL_CHARS);
+$sahkoposti = filter_var($input->sahkoposti, FILTER_SANITIZE_SPECIAL_CHARS);
+$palaute = filter_var($input->palaute, FILTER_SANITIZE_SPECIAL_CHARS);
 
 
 try{
